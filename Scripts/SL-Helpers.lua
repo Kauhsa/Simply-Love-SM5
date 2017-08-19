@@ -392,9 +392,9 @@ SetGameModePreferences = function()
 	if SL.Global.GameMode == "Casual" then
 		SL.Global.ActiveModifiers.WorstTimingWindow = 3
 
-	-- Otherwise, we want all TimingWindows enabled by default.
+	-- Otherwise, we want all Decents disabled by default.
 	else
- 		SL.Global.ActiveModifiers.WorstTimingWindow = 5
+		SL.Global.ActiveModifiers.WorstTimingWindow = 4
 	end
 
 	-- loop through human players and apply whatever mods need to be set now

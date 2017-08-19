@@ -355,7 +355,7 @@ local Overrides = {
 		end,
 		OneChoiceForAllPlayers = true,
 		LoadSelections = function(self, list, pn)
-			local worst = SL.Global.ActiveModifiers.WorstTimingWindow
+			local worst = SL.Global.ActiveModifiers.WorstTimingWindow or 4
 			if 	worst==5 then list[1] = true
 			elseif 	worst==4 then list[2] = true
 			elseif 	worst==3 then list[3] = true
