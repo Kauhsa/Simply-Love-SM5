@@ -31,8 +31,32 @@ local t = Def.ActorFrame{
 	}
 }
 
-for player in ivalues(Players) do
+local function juustot(position, align, calories)
+	local burgerholder = Def.ActorFrame{
+		InitCommand=function(self) 
+			self:xy(position, 110)
+		end
+	}
+	local burgers = (calories / 600)
+	
+	local currentBurger = 0
+	while currentBurger < burgers do
+		local lul = currentBurger
+		burgerholder[#burgerholder+1] = Def.Sprite{
+			Texture=THEME:GetPathB("ScreenGameOver", "overlay/triplajuusto.png"),
+			InitCommand=function(self)
+				self:zoomto(50,50):x(lul*40*align):cropright(1 - (burgers - lul))
+			end
+		}
 
+		currentBurger = currentBurger + 1
+		
+	end
+
+	return burgerholder
+end
+
+for player in ivalues(Players) do
 	local line_height = 60
 	local middle_line_y = 220
 	local x_pos = player == PLAYER_1 and 80 or _screen.w-80
@@ -85,6 +109,13 @@ for player in ivalues(Players) do
 	end
 
 	t[#t+1] = PlayerStatsAF
+
+	if PROFILEMAN:IsPersistentProfile(player) then
+		local calories = PROFILEMAN:GetProfile(player):GetCaloriesBurnedToday()
+		local burger_pos = player == PLAYER_1 and 35 or _screen.w-35
+		local burger_alignment = player == PLAYER_1 and 1 or -1	
+		t[#t+1] = juustot(burger_pos, burger_alignment, calories)
+	end
 end
 
 return t
