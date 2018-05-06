@@ -34,6 +34,7 @@ local PlayerDefaults = {
 				MissBecauseHeld = false,
 				NPSGraphAtTop = false,
 				Vocalization = "None",
+				LaneCover="0%",
 			}
 			self.Streams = {
 				SongDir = nil,

@@ -24,6 +24,7 @@ local profile_whitelist = {
 	HideDanger = "boolean",
 	HideComboExplosions = "boolean",
 
+	LaneCover = "string",
 	LifeMeterType = "string",
 	DataVisualizations = "string",
 	TargetScore = "number",
