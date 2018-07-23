@@ -4,6 +4,7 @@ local songs = {
 	Bears  = "crystalis",
 	Ducks  = "Xuxa fami VRC6",
 	Cats   = "Beanmania IIDX",
+	Custards = "cloud break",
 	Spooky = "Spooky Scary Chiptunes",
 	Gay    = "Mystical Wheelbarrow Journey",
 	Stars  = "Shooting Star - faux VRC6 remix",
