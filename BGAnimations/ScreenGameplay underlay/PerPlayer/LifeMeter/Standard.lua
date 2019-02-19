@@ -8,7 +8,6 @@ local newBPS, oldBPS
 local swoosh, move
 
 local Update = function(self)
-
 	newBPS = GAMESTATE:GetSongBPS()
 	move = (newBPS*-1)/2
 

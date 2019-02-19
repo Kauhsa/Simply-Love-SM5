@@ -31,7 +31,9 @@ local t = Def.ActorFrame{
 	LoadActor("./GlobalStorage.lua"),
 
 	-- help text that appears if we're in Casual gamemode
-	LoadActor("./CasualHelpText.lua")
+	LoadActor("./CasualHelpText.lua"),
+
+	LoadActor("./SyncStartScores.lua")
 }
 
 
