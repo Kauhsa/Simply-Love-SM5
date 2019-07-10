@@ -3,6 +3,7 @@ local t = Def.ActorFrame{
 	ChangeStepsMessageCommand=function(self, params)
 		self:playcommand("StepsHaveChanged", params)
 	end,
+	StorageDevicesChangedMessageCommand=ReloadProfiles,
 
 	-- ---------------------------------------------------
 	--  first, load files that contain no visual elements, just code that needs to run
