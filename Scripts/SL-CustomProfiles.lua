@@ -114,9 +114,9 @@ function ReadProfileCustom(profile, dir)
 end
 
 function ReloadProfiles()
-	change = true
+	local change = true
 	for pn in ivalues( GAMESTATE:GetHumanPlayers() ) do
-		state = MEMCARDMAN:GetCardState(pn)
+		local state = MEMCARDMAN:GetCardState(pn)
 		if state == "MemoryCardState_late" or state == "MemoryCardState_error" or state == 'MemoryCardState_removed' then
 			change = true
 		end

@@ -260,7 +260,7 @@ Branch.AfterProfileSaveSummary = function()
 end
 
 Branch.AfterProfileLoad = function()
-	screen = "ScreenSelectPlayMode"
+	local screen = "ScreenSelectPlayMode"
 
 	if not SL.Global.BranchOverride == nil then
 		screen = SL.Global.BranchOverride
