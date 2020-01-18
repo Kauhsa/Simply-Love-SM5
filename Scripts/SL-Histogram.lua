@@ -9,7 +9,18 @@ local function gen_vertices(player, width, height)
 			return {}
 		end
 
-		local TrailEntry = Trail:GetTrailEntry(GAMESTATE:GetCourseSongIndex())
+		local CourseSongIndex = GAMESTATE:GetCourseSongIndex()
+
+		if CourseSongIndex < 0 then
+			return {}
+		end
+
+		local TrailEntry = Trail:GetTrailEntry(CourseSongIndex)
+
+		if not TrailEntry then
+			return {}
+		end
+
 		Steps = TrailEntry:GetSteps()
 		Song = TrailEntry:GetSong()
 	else
