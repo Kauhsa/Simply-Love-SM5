@@ -3,12 +3,22 @@ local function gen_vertices(player, width, height)
 	local first_step_has_occurred = false
 
 	if GAMESTATE:IsCourseMode() then
-		local TrailEntry = GAMESTATE:GetCurrentTrail(player):GetTrailEntry(GAMESTATE:GetCourseSongIndex())
+		local Trail = GAMESTATE:GetCurrentTrail(player)
+
+		if not Trail then
+			return {}
+		end
+
+		local TrailEntry = Trail:GetTrailEntry(GAMESTATE:GetCourseSongIndex())
 		Steps = TrailEntry:GetSteps()
 		Song = TrailEntry:GetSong()
 	else
 		Steps = GAMESTATE:GetCurrentSteps(player)
 		Song = GAMESTATE:GetCurrentSong()
+	end
+
+	if not Steps or not Song then
+		return {}
 	end
 
 	local PeakNPS, NPSperMeasure = GetNPSperMeasure(Song, Steps)

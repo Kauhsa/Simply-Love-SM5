@@ -25,13 +25,14 @@ local t = Def.ActorFrame{
 	LoadActor("./PerPlayer/Under.lua"),
 	-- grid of Difficulty Blocks (normal) or CourseContentsList (CourseMode)
 	LoadActor("./StepsDisplayList/default.lua"),
-	-- elements we need two of that draw over the StepsDisplayList (just the bouncing cursors, really)
-	LoadActor("./PerPlayer/Over.lua"),
 
 	-- Graphical Banner
 	LoadActor("./Banner.lua"),
 	-- Song Artist, BPM, Duration (Referred to in other themes as "PaneDisplay")
 	LoadActor("./SongDescription.lua"),
+
+	-- elements we need two of that draw over the StepsDisplayList (just the bouncing cursors, really)
+	LoadActor("./PerPlayer/Over.lua"),
 
 	-- ---------------------------------------------------
 	-- finally, load the overlay used for sorting the MusicWheel (and more), hidden by default
