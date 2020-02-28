@@ -35,6 +35,7 @@ local PlayerDefaults = {
 				NPSGraphAtTop = false,
 				Vocalization = "None",
 				LaneCover="0%",
+				NotefieldPosition = "Normal"
 			}
 			self.Streams = {
 				SongDir = nil,

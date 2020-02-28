@@ -497,6 +497,9 @@ local Overrides = {
 		end
 	},
 	-------------------------------------------------------------------------
+	NotefieldPosition = {
+		Values = { 'Normal','Edge' },
+	},
 }
 
 
